@@ -7,22 +7,27 @@ import Avatar from "@/assets/avatar.png";
 
 const navItem = [
   {
+    id: 1,
     link: "#",
     name: "Home",
   },
   {
+    id: 2,
     link: "#",
     name: "About",
   },
   {
+    id: 3,
     link: "#",
     name: "Services",
   },
   {
+    id: 4,
     link: "#",
     name: "Prices",
   },
   {
+    id: 5,
     link: "#",
     name: "Contact",
   },
@@ -43,7 +48,7 @@ const Navbar = () => {
         {navItem.map((items, key) => {
           return (
             <div>
-              <Link index={key} className="link-button" href={items.link}>
+              <Link key={items.id} className="link-button" href={items.link}>
                 {items.name}
               </Link>
             </div>

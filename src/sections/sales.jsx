@@ -13,6 +13,7 @@ import Link from "next/link";
 
 const data = [
   {
+    id: 1,
     image: Img2,
     price: "9000",
     color: "5",
@@ -20,6 +21,7 @@ const data = [
     link: "#",
   },
   {
+    id: 2,
     image: Img3,
     price: "7000",
     color: "3",
@@ -27,6 +29,7 @@ const data = [
     link: "product/13",
   },
   {
+    id: 3,
     image: Img4,
     price: "8000",
     color: "4",
@@ -34,6 +37,7 @@ const data = [
     link: "product/14",
   },
   {
+    id: 4,
     image: Img5,
     price: "3000",
     color: "3",
@@ -41,6 +45,7 @@ const data = [
     link: "product/15",
   },
   {
+    id: 5,
     image: Img9,
     price: "4000",
     color: "5",
@@ -48,6 +53,7 @@ const data = [
     link: "product/16",
   },
   {
+    id: 6,
     image: Img7,
     price: "10000",
     color: "10",
@@ -55,6 +61,7 @@ const data = [
     link: "product/17",
   },
   {
+    id: 7,
     image: Img8,
     price: "4200",
     color: "6",
@@ -62,6 +69,7 @@ const data = [
     link: "product/18",
   },
   {
+    id: 8,
     image: Img6,
     price: "5400",
     color: "4",
@@ -81,7 +89,7 @@ const Sales = () => {
       <div className="flex justify-center flex-wrap">
         {data.map((img,key) => {
           return (
-            <Link index={key} href={img.link}>
+            <Link key={img.id} href={img.link}>
               <div className="mx-5 mb-5 text-gray-300">
                 <div className="img">
                   <Image
