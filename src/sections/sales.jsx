@@ -79,9 +79,9 @@ const Sales = () => {
         colourways at Eye Frame.
       </p>
       <div className="flex justify-center flex-wrap">
-        {data.map((img) => {
+        {data.map((img,key) => {
           return (
-            <Link href={img.link}>
+            <Link index={key} href={img.link}>
               <div className="mx-5 mb-5 text-gray-300">
                 <div className="img">
                   <Image

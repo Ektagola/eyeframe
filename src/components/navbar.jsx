@@ -40,10 +40,10 @@ const Navbar = () => {
             <Image src={Logo} width={"50px"} alt="logo" />
           </Link>
         </div>
-        {navItem.map((items) => {
+        {navItem.map((items, key) => {
           return (
             <div>
-              <Link className="link-button" href={items.link}>
+              <Link index={key} className="link-button" href={items.link}>
                 {items.name}
               </Link>
             </div>
